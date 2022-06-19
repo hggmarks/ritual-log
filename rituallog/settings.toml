@@ -1,0 +1,4 @@
+name = "rituallog"
+
+[database]
+url = "postgresql://postgres:171011@localhost:5432/ritualsdb" 
