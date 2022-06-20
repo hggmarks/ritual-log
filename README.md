@@ -20,7 +20,7 @@ Ritual-log é um CLI-APP para realizar CRUD dos rituais do RPG de mesa [Ordem Pa
 curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
 ```
 
-#### Em outros ambientes pode instalar com`
+#### Em outros ambientes pode instalar com
 
 ```bash
 pip install --user poetry
