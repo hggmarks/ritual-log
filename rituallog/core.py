@@ -1,6 +1,6 @@
 from typing import List
 from sqlmodel.sql.expression import select
-from rituallog.database import get_session 
+from rituallog.database import get_session
 from rituallog.models import Ritual
 
 
@@ -14,22 +14,22 @@ def add_ritual_to_db(
     target: str,
     duration: str,
     mat_comp: str = '?',
-    resistance: str = ''
+    resistance: str = '',
 ) -> bool:
 
     with get_session() as session:
         ritual = Ritual(
-                name=name,
-                element=element,
-                circle=circle,
-                cost=cost,
-                execution=execution,
-                range=range,
-                target=target,
-                duration=duration,
-                mat_comp=mat_comp,
-                resistance=resistance
-                )
+            name=name,
+            element=element,
+            circle=circle,
+            cost=cost,
+            execution=execution,
+            range=range,
+            target=target,
+            duration=duration,
+            mat_comp=mat_comp,
+            resistance=resistance,
+        )
         session.add(ritual)
         session.commit()
 

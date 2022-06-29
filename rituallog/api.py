@@ -14,6 +14,7 @@ async def list_rituals():
     rituals = get_rituals_from_db()
     return rituals
 
+
 @api.post('/rituals/', response_model=RitualOut)
 async def add_ritual(ritual_in: RitualIn, response: Response):
 

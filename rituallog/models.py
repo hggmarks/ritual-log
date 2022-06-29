@@ -1,6 +1,6 @@
 from datetime import datetime
 from typing import Optional
-from sqlmodel import SQLModel, Field, select
+from sqlmodel import SQLModel, Field
 from pydantic import validator
 
 
@@ -23,6 +23,3 @@ class Ritual(SQLModel, table=True):
         if v < 1 or v > 10:
             raise RuntimeError(f"{field.name} must be between 1 and 10")
         return v
-
-
-# ritual = Ritual(name='Amaldiçoar arma', element='escolha 1', circle=1, cost=1, execution='movimento', range='toque', target='1 arma que cause dano fisico', duration='cena')
