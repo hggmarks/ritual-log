@@ -1,0 +1,4 @@
+name = "rituallog"
+
+[database]
+url = "" 

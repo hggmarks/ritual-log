@@ -19,7 +19,7 @@ class Ritual(SQLModel, table=True):
     date: datetime = Field(default_factory=datetime.now)
 
     @validator("circle")
-    def validate_circle(cls, v, field):
+    def validate_circle_cost(cls, v, field):
         if v < 1 or v > 10:
             raise RuntimeError(f"{field.name} must be between 1 and 10")
         return v
